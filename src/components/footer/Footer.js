@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
+import React from "react";
 import g_plus from "../../images/social_icons/g_plus.png";
 import facebook from "../../images/social_icons/facebook.png";
 import youtube from "../../images/social_icons/you_tube.png";
