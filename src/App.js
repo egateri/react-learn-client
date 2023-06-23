@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <React.Fragment>
-    <div>
+    <div className="container-fluid">
       <Header />
     </div>
   </React.Fragment>  
