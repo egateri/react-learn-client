@@ -1,12 +1,23 @@
 import React from 'react';
 import './newProductForm.css';
 
+import {v4} from 'uuid'; 
+
 function NewProductForm() {
+
+       // Function for handling onsubmission event
+   function handleNewProductFormSubmission(event){
+    event.preventDefault();
+    console.log(event.target.name.value)
+    console.log(event.target.price.value)
+    console.log(event.target.description.value)
+    console.log(event.target.quantity.value)
+    }
    return (
        <React.Fragment>
 
            <div className="container product-form">
-               <form className="new-product-form" >
+               <form className="new-product-form" onSubmit={handleNewProductFormSubmission}>
                    <h1>Product Form</h1>
                    <div className="form-input-material">
                        <input type = 'text'
@@ -56,6 +67,7 @@ function NewProductForm() {
            </div>
        </React.Fragment>
    )
+
 }
 
 export default NewProductForm;
