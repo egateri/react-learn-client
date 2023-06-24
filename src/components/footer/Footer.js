@@ -35,11 +35,7 @@ function Footer() {
                 <img src={g_plus} className="socio-icon" alt="g-plus" />
                 <img src={facebook} className="socio-icon" alt="facebook" />
                 <img src={youtube} className="socio-icon" alt="youtube" />
-                <img
-                  src={stumble_upon}
-                  className="socio-icon"
-                  alt="stumble upon"
-                />
+                <img src={stumble_upon} className="socio-icon" alt="stumble upon"/>
                 <img src={skype} className="socio-icon" alt="skype" />
                 <img src={flickr} className="socio-icon" alt="flickr" />
                 <img src={twitter} className="socio-icon" alt="twitter" />

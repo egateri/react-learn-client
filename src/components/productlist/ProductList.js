@@ -8,6 +8,7 @@ import trekkingshoes from "../../images/products/trekkingshoes.png";
 import giacket from "../../images/products/giacket.png";
 import tshirt_ladies from "../../images/products/tshirt_ladies.png";
 
+
 // ActualProductList
 const actualProductList = [
   {
