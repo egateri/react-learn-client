@@ -91,8 +91,9 @@ class ProductControl extends Component {
 
         return (
             <React.Fragment>
-                <AddProduct />
-                <button onClick = {this.handleClick}>{buttonText} </button>
+                <AddProduct
+               whenButtonClicked = {this.handleClick}
+               buttonText = {buttonText} />
                 {currentVisibleState}
                
             </React.Fragment>
