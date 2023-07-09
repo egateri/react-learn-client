@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import ProductList from "../productlist/ProductList";
 import AddProduct from "../addproduct/AddProduct";
 import NewProductForm from '../newproduct/NewProductForm';
-
 import tshirt from "../../images/products/tshirt.png";
 import backpack from "../../images/products/backpack.png";
 import pants from "../../images/products/pants.png";
 import trekkingshoes from "../../images/products/trekkingshoes.png";
 import giacket from "../../images/products/giacket.png";
 import tshirt_ladies from "../../images/products/tshirt_ladies.png";
+import Default_image from "../../images/product_image.jpeg";
 
 
 // ActualProductList
@@ -64,18 +64,31 @@ class ProductControl extends Component {
             productFormVisible: !prevState.productFormVisible
         }))
     }
+    // Method to handle adding a new product
+   handleAddingNewProduct = (newProduct) =>{
+    if (newProduct.photo === undefined){
+        newProduct.photo = Default_image
+    }
+    const newProductList = this.state.actualProductList.concat(newProduct)
+    this.setState({
+        actualProductList: newProductList,
+        productFormVisible: false
+    })
+};
 
     render() {
         let currentVisibleState = null;
         let buttonText = null;
         if (this.state.productFormVisible){
-            currentVisibleState = <NewProductForm />
+          currentVisibleState = <NewProductForm  onNewProductCreation= {this.handleAddingNewProduct}/>
             buttonText = 'Go back to Product List'
 
         }else{
             currentVisibleState = <ProductList productList = {this.state.actualProductList} />
             buttonText = 'Add A Product'
         }
+
+
         return (
             <React.Fragment>
                 <AddProduct />

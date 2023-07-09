@@ -3,15 +3,23 @@ import './newProductForm.css';
 
 import {v4} from 'uuid'; 
 
-function NewProductForm() {
+const NewProductForm = (props) =>{
 
        // Function for handling onsubmission event
-   function handleNewProductFormSubmission(event){
+const handleNewProductFormSubmission =(event)=>{
     event.preventDefault();
     console.log(event.target.name.value)
     console.log(event.target.price.value)
     console.log(event.target.description.value)
     console.log(event.target.quantity.value)
+
+    props.onNewProductCreation({
+        name: event.target.name.value,
+        price: event.target.price.value,
+        description: event.target.description.value,
+        quantity: event.target.quantity.value,
+        id: v4()
+    })
     }
    return (
        <React.Fragment>

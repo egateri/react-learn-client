@@ -10,7 +10,6 @@ function App() {
     <React.Fragment>
     <div className="container-fluid">
       <Header />
-     
       <ProductControl/>
       <AboutUs />
       <Footer />
