@@ -25,6 +25,7 @@ function ProductList(props) {
           <div className="row">
             {props.productList.map((product) => (
               <Product
+              whenProductIsClicked = {props.onProductSelection}
                 photo={product.photo}
                 name={product.name}
                 price={product.price}

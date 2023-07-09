@@ -7,7 +7,8 @@ function Product(props) {
    return (
        <React.Fragment>
        <div className="col-12 col-sm-12 col-md-4" >
-           <div className="product" >
+           
+           <div className="product" onClick = { () => props.whenProductIsClicked(props.id)} >
                <div className="product-img">
                    <img src= {props.photo}
                    className="img-fluid d-block mx-auto"
@@ -20,8 +21,9 @@ function Product(props) {
                <div >
                </div>
            </div>
+           </div>
 
-       </div>
+       
        </React.Fragment>
    )
 }
