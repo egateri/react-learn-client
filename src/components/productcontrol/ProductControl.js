@@ -25,7 +25,7 @@ class ProductControl extends Component {
         }
     }
     componentDidMount(){
-        axios.get("http://localhost:5000/products")
+        axios.get('https://react-yollomy-react-backend-rest-api.onrender.com/products')
         .then(res =>{
             console.log(res);
             this.setState({
@@ -35,7 +35,7 @@ class ProductControl extends Component {
         .catch((err)=>console.log(err));
     };
     handleDeletingProduct = (id) =>{
-        axios.delete('http://localhost:5000/products/'+id)
+        axios.delete('https://react-yollomy-react-backend-rest-api.onrender.com/products'+id)
             .then(res => console.log(res.data))
             .catch((error) =>{
                 console.log(error)
@@ -73,7 +73,7 @@ class ProductControl extends Component {
         newProduct.photo = Default_image;
     }
        
-    axios.post('http://localhost:5000/products/',newProduct)
+    axios.post('https://react-yollomy-react-backend-rest-api.onrender.com/products',newProduct)
     .then(res => console.log(res.data))
     .catch((error) =>{
         console.log(error)
