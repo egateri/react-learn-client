@@ -1,6 +1,7 @@
-import React from 'react';
+import React from 'react'
 import './productDetail.css';
-
+// import Default_image from '../images/product_image.jpeg'
+// import Default_image from '../../images/product_image.jpeg'
 
 function ProductDetail(props) {
    return (
@@ -19,6 +20,7 @@ function ProductDetail(props) {
                            </div>
                            <div className="details col-md-6">
                                <h3 className="product-title">{props.product.name} </h3>
+                               
                                <div className="rating">
                                    <div className="stars">
                                        <span className="fa fa-star checked"></span>
@@ -38,15 +40,16 @@ function ProductDetail(props) {
                                    <span className="size" data-toggle="tooltip" title="large">l</span>
                                    <span className="size" data-toggle="tooltip" title="xtra large">xl</span>
                                </h5>
-                               <h5 className="sizes">Quantiy:
+                               <h5 className="sizes">Quantity:
                                    <span className="size" data-toggle="tooltip" title="small">{props.product.quantity} </span>
                                </h5>
                               
                                <div className="action">
                                    <button className="add-to-cart btn btn-default"  type="button">Buy Product</button>
-                                   {/* <button className="like btn btn-default" type="button"><span className="fa fa-heart"></span></button> */}
-                                   <button className="add-to-cart btn btn-default float-right"> Delete Product</button>
+              
+                                   <button className="add-to-cart btn btn-default float-right" onClick={()=> props.onDeleteProduct(props.product._id)}> Delete Product</button> {/* new code*/}
                                </div>
+                               
                            </div>
                        </div>
                    </div>
@@ -56,4 +59,4 @@ function ProductDetail(props) {
    )
 }
 
-export default ProductDetail;
+export default ProductDetail

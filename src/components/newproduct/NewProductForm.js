@@ -18,6 +18,7 @@ const handleNewProductFormSubmission =(event)=>{
         price: event.target.price.value,
         description: event.target.description.value,
         quantity: event.target.quantity.value,
+        // photo: event.target.photo.value,
         id: v4()
     })
     }
@@ -70,6 +71,17 @@ const handleNewProductFormSubmission =(event)=>{
                        />
                        <label htmlFor="quantity"> Quantity</label>
                    </div>
+                   {/* <div className="form-input-material">
+                       <input type = 'text'
+                           name = 'photo'
+                           placeholder = ' '
+                           className = 'form-control-material'
+                           autoComplete="off"
+                           id = 'photo'
+                           required
+                       />
+                       <label htmlFor="quantity"> Photo</label>
+                   </div> */}
                    <button type="submit" className="btn btn-primary btn-ghost">Add Product</button>   
                </form>
            </div>
