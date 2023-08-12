@@ -35,7 +35,7 @@ class ProductControl extends Component {
         .catch((err)=>console.log(err));
     };
     handleDeletingProduct = (id) =>{
-        axios.delete('https://react-yollomy-react-backend-rest-api.onrender.com/products'+id)
+        axios.delete('https://react-yollomy-react-backend-rest-api.onrender.com/products/'+id)
             .then(res => console.log(res.data))
             .catch((error) =>{
                 console.log(error)
